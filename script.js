@@ -13,7 +13,7 @@ if (typeof(Storage) !== "undefined") {
   }
 }
 
-document.getElementById("editBtn").addEventListener('click', function(e) {
+editBtn.addEventListener('click', function(e) 
   if (!editables[0].isContentEditable) {
     editables[0].contentEditable = 'true';
     editables[1].contentEditable = 'true';
