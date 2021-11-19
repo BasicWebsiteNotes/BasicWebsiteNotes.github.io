@@ -17,44 +17,16 @@ CSS
 <div id="wrapper">
 
   <section>
-    <h1 class="headline">contentEditable Demonstration</h1>
-
     <button id="editBtn" type="button">Edit Document</button>
     <div id="editDocument">
-      <h1 id="title">A Nice Heading.</h1>
-      <p>Last Edited by <span id="author">Monty Shokeen</span>
+      <h3 id="title">Subheading</h3>
+      <p>Last Edited by <span id="author">(Your Name.)</span>
       </p>
-      <p id="content">You can change the heading, author name and this content itself. Click on Edit Document to start editing. At this point, you can edit this document and the changes will be saved in localStorage. However, once you reload the page your changes will be gone. To fix it we will have to retrieve the contents from localSotrage when the page reloads.</p>
+      <p id="content">Start Taking Notes.</p>
     </div>
   </section>
 </div>
-  
-  <script>
-  var editBtn = document.getElementById('editBtn');
-var editables = document.querySelectorAll('#title, #author, #content')
-
-editBtn.addEventListener('click', function(e) {
-  if (!editables[0].isContentEditable) {
-    editables[0].contentEditable = 'true';
-    editables[1].contentEditable = 'true';
-    editables[2].contentEditable = 'true';
-    editBtn.innerHTML = 'Save Changes';
-    editBtn.style.backgroundColor = '#6F9';
-  } else {
-    // Disable Editing
-    editables[0].contentEditable = 'false';
-    editables[1].contentEditable = 'false';
-    editables[2].contentEditable = 'false';
-    // Change Button Text and Color
-    editBtn.innerHTML = 'Enable Editing';
-    editBtn.style.backgroundColor = '#F96';
-    // Save the data in localStorage 
-    for (var i = 0; i < editables.length; i++) {
-      localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
-    }
-  }
-});
-  </script>
+<script src="script.js"></script>
 <br><br>
 </body>
 <footer>
