@@ -2,7 +2,7 @@ var editBtn0 = document.getElementById('editBtn0');
 var editBtn1 = document.getElementById('editBtn1');
 var editBtn2 = document.getElementById('editBtn2');
 var editables0 = document.querySelectorAll('#author0, #content0');
-var editables1 = document.querySelectorAll('#author01, #content1');
+var editables1 = document.querySelectorAll('#author1, #content1');
 var editables2 = document.querySelectorAll('#author2, #content2');
 
 if (typeof(Storage) !== "undefined") {
